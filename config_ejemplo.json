@@ -1,0 +1,31 @@
+{
+  "urls": [
+    "file:///C:/Users/tu-usuario/Documents/archivo1.html",
+    "file:///C:/Users/tu-usuario/Documents/archivo2.html",
+    "https://ejemplo.com/pagina1",
+    "https://ejemplo.com/pagina2"
+  ],
+  "output_dir": "salida_markdown",
+  "options": {
+    "headless": true,
+    "wait_until": "networkidle",
+    "timeout": 30000,
+    "parallel": false,
+    "max_concurrent": 3,
+    "delay_between_requests": 1000,
+    "retry_attempts": 2
+  },
+  "markdown": {
+    "strip_elements": ["script", "style", "nav", "footer", "aside", "header"],
+    "file_extension": ".md",
+    "naming_pattern": "contenido_{index}",
+    "smart_naming": true,
+    "clean_excessive_whitespace": true
+  },
+  "logging": {
+    "level": "INFO",
+    "console": true,
+    "file": true,
+    "log_dir": "logs"
+  }
+}
